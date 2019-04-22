@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello"></string>
+    <string name="app_name">Card Holder</string>
+    <string name="some_title">Other</string>
+    <string name="actionbar_activity_not_found">Failed to open intent...</string>
+    <string name="map_key">AIzaSyAVuGRAkk5gj3X4K-Ke49djSHVkGyQOr68</string>
+    <string name="internet_disable">Internet is disabled</string>
+    <string name="interstial_ad_unit_id">ca-app-pub-5584227115676924/8253305757</string>
+
+    <string name="secret_ques">Secret question</string>
+    <string name="set_secret_ques">Please set question and answer</string>
+    <string name="set_pin">Set 4 digit PIN</string>
+    <string name="confirm_pin">Confirm 4 digit PIN</string>
+    <string name="tap_to_set_secret_ques">Confirm 4 digit PIN</string>
+    <string name="updatesecret_ques">Confirm 4 digit PIN</string>
+    <string name="STR_ENTER_PIN">Enter 4 digit PIN</string>
+    <string name="STR_NO_NUMBER">No contact number</string>
+    <string name="STR_NO_EMAIL">No Email address</string>
+    <string name="STR_NO_EMIAL_CLENT">There are no email clients installed.</string>
+    <string name="STR_SEND_VIA">Send via</string>
+    <string name="STR_ACTION_ITEM_1">Send SMS</string>
+    <string name="STR_ACTION_ITEM_2">Phone Call</string>
+    <string name="STR_ACTION_ITEM_3">Send Email</string>
+    <string name="STR_ACTION_ITEM_4">Show Map</string>
+    <string name="STR_ENTER_NAME">Please enter name</string>
+    <string name="STR_CONTAT_SEARCH">Search contact</string>
+    <string name="STR_OK">OK</string>
+    <string name="STR_CANCEL">CANCEL</string>
+    <string name="STR_PERSON_IMAGE">Person image</string>
+    <string name="STR_BROWSE">Browse</string>
+    <string name="STR_PERSON_NAME">Person name</string>
+    <string name="STR_COMPANY_NAME">Person name</string>
+    <string name="STR_PLACE">Address</string>
+    <string name="STR_EMAIL">Email address</string>
+    <string name="STR_PHONE_NO">Phone number</string>
+    <string name="STR_VISITING_CARD">Visiting card</string>
+    <string name="STR_SEARCH_PLACE">Search place</string>
+</resources>

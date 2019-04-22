@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lint>
+    <issue id="NewApi">
+        <ignore path="src/com/biz/cardreader/mobile/bcr/utility/MaterialDialog.java" />
+    </issue>
+</lint>

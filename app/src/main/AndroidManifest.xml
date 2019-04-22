@@ -1,0 +1,84 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.sftech.business.cardholder"
+    android:versionCode="100"
+    android:versionName="1.0.0" >
+
+    <uses-sdk
+        android:targetSdkVersion="27" />
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" >
+    </uses-permission>
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.INTERNET" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+
+    <!-- Allows the API to access Google web-based services: -->
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+
+    <!-- Optional permissions -->
+    <!-- Allows the API to use WiFi or mobile cell data (or both) to determine the device's location: -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <application
+        android:name="com.rfit.card.holder.digitalholder.appfrw.BaseApplication"
+        android:icon="@drawable/app_icon"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+
+        <uses-library android:name="com.google.android.maps"/>
+
+        <activity
+            android:name="com.rfit.card.holder.digitalholder.HomeActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.rfit.card.holder.digitalholder.ImageCropActivity"
+            android:configChanges="orientation|screenLayout"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan"
+            android:theme="@style/ThemeTransparent">
+        </activity>
+        <activity
+            android:name="com.rfit.card.holder.digitalholder.FirstEntryPreviewActivity"
+            android:configChanges="orientation|screenLayout"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity
+            android:name="com.rfit.card.holder.digitalholder.DisplayImageActivity"
+            android:configChanges="orientation|screenLayout"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+
+        <activity
+            android:name="com.rfit.card.holder.digitalholder.MapsActivity"
+            android:configChanges="orientation|screenLayout"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/map_key" />
+    </application>
+
+</manifest>

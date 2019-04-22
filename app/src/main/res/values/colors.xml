@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<color name="tabMedium">#2B2B2B</color>
+	<color name="tabDark">#000000</color>
+	<color name="tabTransparent">#10ffffff</color>
+    <color name="actionbar_separator">#FFFFFF</color>
+    <color name="actionbar_title">#FFFFFF</color>
+    <color name="actionbar_background_start">#000000</color>
+    <color name="actionbar_background_end">#2B2B2B</color>
+    <color name="actionbar_background_item_pressed_start">#2B2B2B</color>
+    <color name="actionbar_background_item_pressed_end">#2B2B2B</color>
+    <color name="color_cayan">#CCCCCC</color>	
+
+     <color name="card_background">#ffffff</color>
+    <color name="card_shadow">#10000000</color>
+    <color name="lite_blue">#ff359ff2</color>
+    <color name="window_background">#00000000</color>
+    <color name="black_de">#DE000000</color>
+     <color name="colorAccent">#FF5252</color>
+
+    <color name="deep_white">#FEFFFF</color>
+    <color name="dark_blue">#372162</color>
+    <color name="red">#ED1D25</color>
+
+    <color name="colorPrimary">#ff359ff2</color>
+    <color name="colorPrimaryDark">#1E88E5</color>
+
+    <color name="black_shade">#666666</color>
+
+    <color name="blue_dim">#ADD8E6</color>
+
+    <color name="windowBackground">#1C1C1C</color>
+    <color name="colorButtonNormal">#FFFFFB</color>
+    <color name="textColorPrimary">#FFFFFB</color>
+    <color name="textColorPrimaryInverse">#1C1C1C</color>
+    <color name="overlay">#AA1C1C1C</color>
+    <color name="divider">#333333</color>
+    <color name="color_80_white">#C5FFFFFF</color>
+</resources>

@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/actionbar_separator">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/lite_blue"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            app:titleTextColor="@color/deep_white" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/appBar"
+        android:padding="5dp">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/card_view_friend"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                card_view:cardCornerRadius="4dp"
+                card_view:cardElevation="4dp"
+                card_view:cardUseCompatPadding="true">
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#FFFFFF"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/txt_per_img"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="5dp"
+                        android:text="@string/STR_PERSON_IMAGE"
+                        android:textColor="@color/tabDark"
+                        android:textSize="16dp"
+                        android:typeface="serif" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txt_per_img"
+                        android:layout_centerInParent="true"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/image_first"
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:layout_marginRight="3dp"
+                            android:adjustViewBounds="true"
+                            android:onClick="clickPersonImage"
+                            android:padding="4dp"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/no_user"></ImageView>
+
+                        <TextView
+                            android:id="@+id/browse_button"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/browse_selector"
+                            android:clickable="true"
+                            android:onClick="onPickPerImage"
+                            android:paddingBottom="10dp"
+                            android:paddingLeft="15dp"
+                            android:paddingRight="15dp"
+                            android:paddingTop="10dp"
+                            android:text="@string/STR_BROWSE"
+                            android:textColor="#FFFFFF"
+                            android:textSize="16dp" />
+                    </LinearLayout>
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                card_view:cardCornerRadius="4dp"
+                card_view:cardElevation="4dp"
+                card_view:cardUseCompatPadding="true">
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#FFFFFF"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/txt_person"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="5dp"
+                        android:text="@string/STR_PERSON_NAME"
+                        android:textColor="@color/tabDark"
+                        android:textSize="15dp"
+                        android:visibility="visible"></TextView>
+
+                    <EditText
+                        android:id="@+id/edt_name"
+                        android:layout_width="fill_parent"
+                        android:layout_height="45dp"
+                        android:layout_below="@+id/txt_person"
+                        android:paddingLeft="5dp"
+                        android:textColor="@color/black_shade"></EditText>
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                card_view:cardCornerRadius="4dp"
+                card_view:cardElevation="4dp"
+                card_view:cardUseCompatPadding="true">
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#FFFFFF"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/txt_company"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="5dp"
+                        android:text="@string/STR_COMPANY_NAME"
+                        android:textColor="@color/tabDark"
+                        android:textSize="15dp"
+                        android:visibility="visible"></TextView>
+
+                    <EditText
+                        android:id="@+id/edt_company"
+                        android:layout_width="fill_parent"
+                        android:layout_height="45dp"
+                        android:layout_below="@+id/txt_company"
+                        android:paddingLeft="5dp"
+                        android:textColor="@color/black_shade"></EditText>
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                card_view:cardCornerRadius="4dp"
+                card_view:cardElevation="4dp"
+                card_view:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:id="@+id/layout_gpsaddress"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:background="#FFFFFF"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/STR_PLACE"
+                        android:textColor="@color/tabDark"
+                        android:textSize="16dp"
+                        android:typeface="serif"></TextView>
+
+                    <ProgressBar
+                        android:id="@+id/progressBar1"
+                        style="?android:attr/progressBarStyleSmall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:padding="5dp"
+                        android:visibility="gone" />
+
+                    <EditText
+                        android:id="@+id/edt_address"
+                        android:layout_width="fill_parent"
+                        android:layout_height="50dp"
+                        android:maxLines="2"
+                        android:paddingBottom="2dp"
+                        android:paddingLeft="5dp"
+                        android:paddingTop="2dp"
+                        android:textColor="@color/black_shade"
+                        android:textSize="14dp"></EditText>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                card_view:cardCornerRadius="4dp"
+                card_view:cardElevation="4dp"
+                card_view:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:id="@+id/layout_email"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:background="#FFFFFF"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/STR_EMAIL"
+                        android:textColor="@color/tabDark"
+                        android:textSize="16dp"
+                        android:typeface="serif"></TextView>
+
+                    <EditText
+                        android:id="@+id/edt_email"
+                        android:layout_width="fill_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="2dp"
+                        android:inputType="textEmailAddress"
+                        android:paddingBottom="2dp"
+                        android:paddingLeft="5dp"
+                        android:paddingTop="2dp"
+                        android:textColor="@color/black_shade"></EditText>
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                card_view:cardCornerRadius="4dp"
+                card_view:cardElevation="4dp"
+                card_view:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:id="@+id/layout_contact"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:background="#FFFFFF"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/STR_PHONE_NO"
+                        android:textColor="@color/tabDark"
+                        android:textSize="16dp"
+                        android:typeface="serif"></TextView>
+
+                    <EditText
+                        android:id="@+id/edt_contact"
+                        android:layout_width="fill_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="2dp"
+                        android:inputType="number"
+                        android:paddingBottom="2dp"
+                        android:paddingLeft="5dp"
+                        android:paddingTop="2dp"
+                        android:textColor="@color/black_shade"></EditText>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                card_view:cardCornerRadius="4dp"
+                card_view:cardElevation="4dp"
+                card_view:cardUseCompatPadding="true">
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:background="#FFFFFF">
+
+                    <TextView
+                        android:id="@+id/txt_visitig_card"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="5dp"
+                        android:text="@string/STR_VISITING_CARD"
+                        android:textColor="@color/tabDark"
+                        android:textSize="16dp"
+                        android:typeface="serif"
+                        android:visibility="visible"></TextView>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txt_visitig_card"
+                        android:layout_centerInParent="true"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/iv_visiting_card"
+                            android:layout_width="220dp"
+                            android:layout_height="200dp"
+                            android:adjustViewBounds="true"
+                            android:onClick="clickCardImage"
+                            android:padding="10dp"
+                            android:src="@drawable/ic_card"
+                            android:visibility="visible"></ImageView>
+
+                        <TextView
+                            android:id="@+id/browse_button_vcard"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/browse_selector"
+                            android:clickable="true"
+                            android:onClick="onPickCardImage"
+                            android:paddingBottom="10dp"
+                            android:paddingLeft="15dp"
+                            android:paddingRight="15dp"
+                            android:paddingTop="10dp"
+                            android:text="@string/STR_BROWSE"
+                            android:textColor="#FFFFFF"
+                            android:textSize="16dp" />
+                    </LinearLayout>
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
